@@ -1,0 +1,206 @@
+<html>
+    <head>
+        <title>Clothing</title>
+	   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.3.0/c3.min.css" />
+	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+	   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	   <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+	   <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.3.0/c3.min.js"></script>
+	   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+	   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDN7CudijCpYuI51Pb17Pf_2n3abS1-vFw"></script>
+	   <script src="https://www.gstatic.com/firebasejs/3.5.0/firebase.js"></script>
+	   
+	   <style>
+		body{
+			background-image: url("https://s-media-cache-ak0.pinimg.com/originals/f2/1b/64/f21b6419a5ab9500457724406356e4cd.gif");
+			height: 100%;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;		
+			color:white;
+		}
+			#myPage .navbar-wrapper .navbar{
+				width: 100%;
+                opacity:0.7;
+                color:pink;
+			}
+			#myPage .navbar-inverse{
+				width:100%;
+				border-radius:0;
+			}
+			#myPage .navbar-wrapper {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width:100%;
+				left: 0;
+				z-index: 20;
+			}
+			#myPage .navbar-wrapper > .container {
+				padding-right: 0;
+				padding-left: 0;
+				width: inherit;
+            }
+		#myPage #idk{
+			background-color: rgba(0,0,0,0.5);
+			padding:50px;
+		}
+		#myPage #ik{
+			background-color: rgba(0,0,0,0.5);
+			padding:0px 50px 0px 50px;
+		}
+		#myPage .row img{
+			width:85%;
+			height:300px;
+		}
+		
+		#myPage #foot{
+			color:white;
+		}
+		
+	   </style>
+		
+	   <script>
+
+		 function setPic(thumbnail){
+			var MainPic = document.getElementById("MainArea")
+			MainPic.src = thumbnail.src;
+		 }	
+		</script>
+    </head>
+   <body id="myPage">
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar fixed-top navbar-inverse">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand">JP CULTURE</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="Food.html">FOOD</a></li>
+                    <li><a href="Festival.html">FESTIVAL</a></li>
+                    <li class="active">><a href="Clothing.html">CLOTHING</a></li>
+                  </ul>
+                </li>
+				<li><a href="aboutus.html">ABOUT US</a></li>
+                <li><a href="quiz.html">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTAKE THE QUIZ</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+	    <div class="container">
+
+        <!-- Page Heading -->
+		<br><br>
+        <div class="row" id="ik">
+            <div class="col-lg-12">
+			<div class="page-header">
+			<center><h1 class="page-header">TRADITIONAL JAPANESE CLOTHING</h1></center>
+			<p class="lead">Japan passionately holds onto its past. Japanese fashions that fell out of everyday wear in the 19th century are regularly revived for holidays, ceremonies, festivals and cultural activities. Clothing in Japan evolved along a unique and fascinating course. It was influenced by factors such as battle and the weather. It was also greatly influenced by the design of Japanese homes.<a href="http://www.japan-talk.com/jt/new/traditional-fashions"> Click here </a>to get more informations.</p>
+			</div>
+            </div>
+        </div>
+        <!-- /.row -->
+		<br>
+        <!-- Project One -->
+        <div class="row" id="idk">
+            <div class="col-md-7">
+                    <img class="img-responsive" src="https://www.japan-zone.com/culture/pix/kimono-fashion1.jpg" alt="">
+            </div>
+            <div class="col-md-5">
+                <h2>1. Kimono</h2>
+                <h3>Kimono was once worn on a daily basis by most Japanese people. In modern times, it's formal wear that's appropriate for a wide range of occasions.</h3>
+                <a class="btn btn-primary" href="https://en.wikipedia.org/wiki/Kimono">Wiki<span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Two -->
+        <div class="row" id="idk">
+            <div class="col-md-7">
+                    <img class="img-responsive" src="http://www.japan-talk.com/images/jt/header/hakama-kyudo-1614-419.jpg" alt="">
+            </div>
+            <div class="col-md-5">
+                <h2>2. Hakama</h2>
+                <h3>Hakama are traditionally men's clothing. At one time, craftsmen, farmers, academics and samurai all wore different styles of hakama. In modern times, women wear hakama too. Hakama are either worn for martial arts or as formal wear.</h3>
+                <a class="btn btn-primary" href="https://en.wikipedia.org/wiki/Hakama">Wiki<span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Three -->
+        <div class="row" id="idk">
+            <div class="col-md-7">
+                    <img class="img-responsive" src="http://www.japonic.com/obi/images/kimono-obi6.jpg" alt="">
+            </div>
+            <div class="col-md-5">
+                <h2>3. Obi</h2>
+                <h3>Obi are ornate wide sashes that are wrapped around the waist of kimono. They are often as expensive as all the other layers of the kimono put together.</h3>
+                <a class="btn btn-primary" href="https://en.wikipedia.org/wiki/Obi_(sash)">Wiki<span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Four -->
+        <div class="row" id="idk">
+
+            <div class="col-md-7">
+                    <img class="img-responsive" src="http://www.japan-talk.com/images/jt/header/yukata-bench-797-718.jpg" alt="">
+            </div>
+            <div class="col-md-5">
+                <h2>4. Yukata</h2>
+                <h3>An inexpensive, informal summer robe for summer that's popular for cherry blossom viewing parties, festivals and fireworks. It's not quite a kimono but it has much the same feel.</h3>
+                <a class="btn btn-primary" href="https://en.wikipedia.org/wiki/Yukata">Wiki<span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Five -->
+        <div class="row" id="idk">
+            <div class="col-md-7">
+                    <img class="img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Festival4.jpg/1024px-Festival4.jpg" alt="">
+            </div>
+            <div class="col-md-5">
+                <h2>5. Happi</h2>
+                <h3>A robe-like cotton vest used as a uniform for teams at festivals that usually comes with a matching headband.</h3>
+                <a class="btn btn-primary" href="https://en.wikipedia.org/wiki/Happi">Wiki<span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+		
+	
+      <!-- FOOTER -->
+      <footer id="foot">
+		<hr>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2017 Team Project <b>神風</b></p>
+      </footer>
+	  </div>
+
+  </body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<title>About Us</title>
+<head>
+  		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.3.0/c3.min.css" />
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+			<link href="css/bootstrap.min.css" rel="stylesheet">
+			<link href="css/thumbnail-gallery.css" rel="stylesheet">
+      
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="">
+
+		   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+		   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		   <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+		   <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.3.0/c3.min.js"></script>
+		   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+		   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDN7CudijCpYuI51Pb17Pf_2n3abS1-vFw"></script>
+       <script src="https://www.gstatic.com/firebasejs/3.5.0/firebase.js"></script>
+<style>
+            body{
+              background-image: url("https://s-media-cache-ak0.pinimg.com/originals/94/9d/73/949d73acb794daaa58567661acdc52dd.png");
+              opacity:0.8;
+		      		background-repeat: no-repeat;
+		      		background-position: center;
+		      		background-size: cover;
+            }
+			#myPage #myCarousel img{
+			 height:700px;
+			 width:100%;
+			}
+			#myPage .navbar-wrapper .navbar{
+				width: 100%;
+                opacity:0.7;
+                color:pink;
+			}
+			#myPage .navbar-inverse{
+				width:100%;
+				border-radius:0;
+			}
+			#myPage .navbar-wrapper {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width:100%;
+				left: 0;
+				z-index: 20;
+			}
+			#myPage .navbar-wrapper > .container {
+				padding-right: 0;
+				padding-left: 0;
+				width: inherit;
+            }
+            .image {
+                display: block;
+                width: 100%;
+                height: 0%;
+                position: absolute;
+            }
+
+            .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #008CBA;
+            overflow: hidden;
+            width: 0;
+            height: 100%;
+            transition: .5s ease;
+            opacity:0.8;
+            }
+
+            .container:hover .overlay {
+            width: 100%;
+            }
+
+            .text {
+            white-space: nowrap; 
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            overflow: hidden;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            }                
+             quiz {
+                float:right;
+            }
+            hr1{
+                opacity: 0.0;
+            }
+
+</style>
+
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <body id="myPage">
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar fixed-top navbar-inverse">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand">JP CULTURE</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="Food.html">FOOD</a></li>
+                    <li><a href="Festival.html">FESTIVAL</a></li>
+                    <li><a href="Clothing.html">CLOTHING</a></li>
+                  </ul>
+                </li>
+				<li class="active"><a href="aboutus.html">ABOUT US</a></li>
+                <li><a href="quiz.html">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTAKE THE QUIZ</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+   
+<hr>
+   
+<!-- Gallery-->
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-12">
+                <h1 class="page-header"><b>Project</b></h1>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="Home.png" alt="" style="width:400px;height:275px;padding:10px;">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="festival.png" alt="" style="width:400px;height:275px;padding:10px;">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="Clothing.png" alt="" style="width:400px;height:275px;padding:10px;">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="Food.png" alt="" style="width:400px;height:275px;padding:10px;">
+                </a>
+            </div>
+     </div>
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"><b>About</b></h3>
+    <p>The culture of Japan has evolved greatly over the millennia, from the country's 
+      prehistoric Jōmon period, to its contemporary modern culture, which absorbs influences
+       from Asia, Europe, and North America.
+    </p>
+  </div>
+
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="" alt="Qihao" style="width:100%;height:10%;">
+      <h3><b>Qihao Lin</b></h3>
+      <p class="w3-opacity" style="background-color:white;">Programmer</p>
+      <p>  </p>
+      <p><button class="w3-button w3-light-grey w3-block">
+        <a href="mailto:qlin4367@baysidehighschool.org?Subject=Hello%20again" target="_top">Contact Us</a></button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="" alt="Ruoyu" style="width:100%;height:10%;" >
+      <h3><b>Ruoyu Lin</b></h3>
+      <p class="w3-opacity" style="background-color:white;">Programmer & Debugger</p>
+      <p>   </p>
+      <p><button class="w3-button w3-light-grey w3-block">
+        <a href="mailto:rlin8366@baysidehighschool.org" target="_top">Contact Us</a></button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="" alt="Yang" style="width:100%;height:10%;">
+      <h3><b>Yang Chen</b></h3>
+      <p class="w3-opacity" style="background-color:white;">Website Styling</p>
+      <p>   </p>
+      <p><button class="w3-button w3-light-grey w3-block">
+        <a href="mailto:ychen2418@baysidehighschool.org?Subject=Hello%20again" target="_top">Contact Us</a></button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="" alt="Aotero" style="width:100%;height:10%;">
+      <h3><b>Aotero</b></h3>
+      <p class="w3-opacity" style="background-color:white;">Researcher</p>
+      <p>   </p>
+      <p><button class="w3-button w3-light-grey w3-block">
+        <a href="mailto:aotero2033@baysidehighschool.org?Subject=Hello%20again" target="_top">Contact Us</a></button></p>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-32" id="contact">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"><b>Credit</b></h3>
+    <p style="font-size:30px;background-color:white;"><b>Credit to the following Websites</b></p>
+    <form action="/action_page.php" target="_blank">
+		<ul style="color:white;">
+			<li><a href="https://developers.google.com/maps/" target="_blank" class="w3-hover-text-green"><b>Google Maps</b></a></li> 
+			<li><a href="https://www.w3schools.com/" target="_blank" class="w3-hover-text-green"><b>w3Schools</b></a></li>
+			<li><a href="http://www.japan-guide.com/e/e3942.html" target="_blank" class="w3-hover-text-green"><b>Japan Guide</b></a></li>
+		  <li><a href="http://www.japan-talk.com/jt/new/japanese-food-list" target="_blank" class="w3-hover-text-green"><b>Japan Talk</b></a></li>
+      <li><a href="http://www.youtube.com" target="_blank" class="w3-hover-text-green"><b>Youtube</b></a></li>
+      <li><a href="https://www.pinterest.com/pin/537758011734821715/" target="_blank" class="w3-hover-text-green"><b>Pinterest</b></a></li>
+      <li><a href="https://www.tumblr.com/tagged/gif" target="_blank" class="w3-hover-text-green"><b>Tumblr Gifs</b></a></li>
+      <li><a href="http://kotaku.com/japan-comes-to-life-in-retro-style-gifs-1665089531" target="_blank" class="w3-hover-text-green"><b>Kotaku Japan</b></a></li>
+    </ul>
+	</form>
+  </div>
+  
+<!-- End page content -->
+</div>
+
+<!-- Google Map -->
+<div id="googleMap" class="w3-grayscale" style="width:100%;height:450px;"></div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>&copy; 2017 Team Project<a href="http://golfname.net/user_data/packages/holotto/img/golfdescript/jukugo/kamikaze.png" title="Kamikaze" target="_blank" class="w3-hover-text-green"><b>神風</b></a></p>
+</footer>
+
+<!-- Add Google Maps -->
+<script>
+function myMap()
+{
+  myCenter=new google.maps.LatLng(40.7711111, -73.7813889);
+  var mapOptions= {
+    center:myCenter,
+    zoom:16, scrollwheel: false, draggable: false,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGEk_Cm0Vl2zDPHR-3TKItv259gj7vyhU&callback=myMap"></script>
+
+</body>
+</html>
